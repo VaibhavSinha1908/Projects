@@ -1,10 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import classes from "./BurgerIngredient.css";
+import classes from "./BurgerIngredient.module.css";
 
 const burgerIngredient = props => {
+  console.log(classes.Bacon);
+
   let ingredient = null;
+  //can be modified for a better code readability.
   switch (props.type) {
     case "bread-buttom":
       ingredient = <div className={classes.BreadBottom}></div>;
@@ -26,7 +29,7 @@ const burgerIngredient = props => {
     case "cheese":
       ingredient = <div className={classes.Cheese}></div>;
       break;
-    case "Bacon":
+    case "bacon":
       ingredient = <div className={classes.Bacon}></div>;
       break;
     case "salad":
@@ -35,6 +38,7 @@ const burgerIngredient = props => {
     default:
       ingredient = null;
   }
+  console.log(ingredient);
   return ingredient;
 };
 
